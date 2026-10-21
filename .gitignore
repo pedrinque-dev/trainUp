@@ -1,0 +1,15 @@
+.env
+node_modules/
+dist/
+__pycache__/
+*.pyc
+*.db
+venv/
+.venv/
+.pytest_cache/
+.vite/
+coverage/
+coverage.xml
+.coverage
+lcov.info
+pytest_junit.xml
