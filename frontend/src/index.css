@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-paper font-sans text-ink antialiased; }
+  h1, h2, h3 { @apply font-bold tracking-tight text-ink; }
+  h1 { @apply text-2xl sm:text-3xl; }
+  h2 { @apply text-lg font-bold; }
+  :focus-visible { outline: 2px solid #0B8FDB; outline-offset: 2px; border-radius: 6px; }
+}
+
+@layer components {
+  .card { @apply rounded-2xl border border-line bg-white p-4 shadow-card sm:p-5; }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-dark px-4 py-2.5 text-sm font-semibold
+      text-white transition hover:bg-brand-deeper disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-teal px-4 py-2.5
+      text-sm font-bold text-ink transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-white px-3.5 py-2 text-sm
+      font-semibold text-ink transition hover:bg-paper disabled:opacity-50;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-danger/30 bg-white px-3.5 py-2 text-sm
+      font-semibold text-danger transition hover:bg-red-50 disabled:opacity-50;
+  }
+  .input {
+    @apply w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm text-ink placeholder:text-muted/70
+      focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/25;
+  }
+  .label { @apply mb-1 block text-sm font-semibold text-ink/80; }
+  .bg-grad { background-image: linear-gradient(90deg, #0B8FDB, #5FC28A 60%, #9BD64A); }
+  .text-grad {
+    background-image: linear-gradient(90deg, #5FC28A, #9BD64A);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
