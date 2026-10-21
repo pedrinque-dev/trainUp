@@ -1,0 +1,53 @@
+# Padrão (produção/demonstração): somente o nginx (porta 80) fica exposto.
+# O backend e o banco ficam na rede interna. Para expor a API em desenvolvimento, use também
+# docker-compose.dev.yml:  docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-trainup}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-trainup}
+      POSTGRES_DB: ${POSTGRES_DB:-trainup}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-trainup} -d ${POSTGRES_DB:-trainup}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-trainup}:${POSTGRES_PASSWORD:-trainup}@db:5432/${POSTGRES_DB:-trainup}
+      SECRET_KEY: ${SECRET_KEY:-}
+      PERSONAL_SIGNUP_CODE: ${PERSONAL_SIGNUP_CODE:-}
+      SEED_DEMO: ${SEED_DEMO:-true}
+      ENABLE_DOCS: ${ENABLE_DOCS:-true}
+      TRUST_PROXY_HEADERS: "true"  # o backend só é alcançável pelo nginx
+    depends_on:
+      db:
+        condition: service_healthy
+    expose:
+      - "8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request as u; u.urlopen('http://127.0.0.1:8000/api/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "80:80"
+
+volumes:
+  pgdata:

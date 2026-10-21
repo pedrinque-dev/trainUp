@@ -1,0 +1,8 @@
+# Override para desenvolvimento: expõe a API e o banco no host.
+services:
+  backend:
+    ports:
+      - "8000:8000"
+  db:
+    ports:
+      - "5432:5432"
