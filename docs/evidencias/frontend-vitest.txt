@@ -1,0 +1,92 @@
+﻿Projeto: frontend
+Comando: npm test -- --reporter=verbose
+Início: 2026-10-23 00:37:43 -03:00
+Código de saída: 0
+
+
+> trainup-frontend@0.3.0 test
+> vitest run --reporter=verbose
+
+
+ RUN  v2.1.9 C:/Users/Pedro/projeto_integrador/trainUp/frontend
+
+ ✓ src/components/ui.test.jsx > ProgressBar > calcula a porcentagem 332ms
+ ✓ src/components/ui.test.jsx > ProgressBar > limita entre 0 e 100
+ ✓ src/components/ui.test.jsx > ProgressBar > não quebra com max = 0
+ ✓ src/components/ui.test.jsx > Field > associa o rótulo ao campo (acessibilidade)
+ ✓ src/components/ui.test.jsx > Tabs > marca a aba ativa e avisa a troca
+ ✓ src/components/ui.test.jsx > Modal > não renderiza fechado
+ ✓ src/components/ui.test.jsx > Modal > abre com título acessível e fecha por botão, fundo e Esc
+ ✓ src/components/ui.test.jsx > Modal > devolve a rolagem da página ao fechar
+ ✓ src/components/ui.test.jsx > estados de tela > ErrorState mostra o alerta e permite tentar de novo
+ ✓ src/components/ui.test.jsx > estados de tela > ErrorState sem onRetry não mostra o botão
+ ✓ src/components/ui.test.jsx > estados de tela > EmptyState exibe título, texto e ação
+ ✓ src/components/ui.test.jsx > estados de tela > SkeletonList anuncia carregamento com o número de linhas pedido
+ ✓ src/components/ui.test.jsx > blocos simples > StatCard mostra valor, rótulo e dica
+ ✓ src/components/ui.test.jsx > blocos simples > PageHeader mostra subtítulo e ações só quando informados
+ ✓ src/components/ui.test.jsx > blocos simples > Badge aplica o tom pedido
+ ✓ src/services/api.test.js > errMsg > usa a mensagem textual do servidor
+ ✓ src/services/api.test.js > errMsg > junta erros de validação e remove o prefixo técnico
+ ✓ src/services/api.test.js > errMsg > avisa quando não há conexão
+ ✓ src/services/api.test.js > errMsg > cai numa mensagem genérica para erros sem detalhe
+ ✓ src/services/api.test.js > interceptors > envia o token como Bearer quando existe
+ ✓ src/services/api.test.js > interceptors > não envia Authorization sem token
+ ✓ src/services/api.test.js > interceptors > 401 com sessão ativa limpa o storage e volta para /login
+ ✓ src/services/api.test.js > interceptors > 401 sem sessão (ex.: senha errada no login) não redireciona
+ ✓ src/services/api.test.js > interceptors > outros erros (403) não derrubam a sessão
+ ✓ src/services/api.test.js > downloadFile > baixa o blob e dispara o download com o nome pedido
+stderr | src/pages/Login.test.jsx > Login > mostra a mensagem do servidor quando a senha está errada (CT045)
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+System.Management.Automation.RemoteException
+ ✓ src/pages/Login.test.jsx > Login > mostra a mensagem do servidor quando a senha está errada (CT045) 1239ms
+ ✓ src/pages/Login.test.jsx > Login > aluno autenticado vai para /aluno e a sessão fica salva 626ms
+ ✓ src/pages/Login.test.jsx > Login > personal autenticado vai para /personal 681ms
+ ✓ src/pages/Login.test.jsx > Login > desabilita o botão enquanto envia (evita envio duplo) 433ms
+ ✓ src/pages/Login.test.jsx > Login > cadastro de aluno envia convite em maiúsculas e depois faz login 789ms
+ ✓ src/AuthContext.test.jsx > AuthContext > começa deslogado e restaura a sessão salva
+ ✓ src/AuthContext.test.jsx > AuthContext > login guarda token e usuário
+ ✓ src/AuthContext.test.jsx > AuthContext > logout revoga o token no servidor e limpa tudo
+ ✓ src/AuthContext.test.jsx > AuthContext > logout funciona mesmo se o servidor estiver fora do ar
+ ✓ src/AuthContext.test.jsx > AuthContext > refreshUser atualiza o usuário com os dados do servidor
+stderr | src/App.test.jsx > rotas protegidas > visitante em / é mandado para o login
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+System.Management.Automation.RemoteException
+ ✓ src/App.test.jsx > rotas protegidas > visitante em / é mandado para o login
+ ✓ src/App.test.jsx > rotas protegidas > visitante em /personal é mandado para o login
+ ✓ src/App.test.jsx > rotas protegidas > visitante em /personal/alunos é mandado para o login
+ ✓ src/pages/Login.test.jsx > Login > exibe o erro de senha fraca vindo da validação do servidor 779ms
+ ✓ src/App.test.jsx > rotas protegidas > visitante em /aluno é mandado para o login
+ ✓ src/App.test.jsx > rotas protegidas > visitante em /agendamento é mandado para o login
+ ✓ src/App.test.jsx > rotas protegidas > visitante em /rota-inexistente é mandado para o login
+ ✓ src/App.test.jsx > rotas protegidas > personal logado entra no painel e não vê a tela de aluno
+ ✓ src/App.test.jsx > rotas protegidas > aluno logado entra no início
+ ✓ src/App.test.jsx > rotas protegidas > aluno tentando abrir área do personal é redirecionado para a sua
+ ✓ src/App.test.jsx > rotas protegidas > personal tentando abrir área do aluno é redirecionado para a sua
+ ✓ src/App.test.jsx > rotas protegidas > a agenda é compartilhada pelos dois perfis
+ ✓ src/App.test.jsx > rotas protegidas > rota desconhecida logado volta para a área do perfil
+ ✓ src/pages/Login.test.jsx > Login > recuperação de senha: pede o token e depois a nova senha 888ms
+ ✓ src/pages/Login.test.jsx > Login > voltar limpa a mensagem de erro 400ms
+ ✓ src/lib/hooks.test.jsx > useFetch > começa carregando e entrega os dados
+ ✓ src/lib/hooks.test.jsx > useFetch > converte falhas em mensagem amigável
+ ✓ src/lib/hooks.test.jsx > useFetch > reload busca de novo e a versão silenciosa não volta ao estado de loading
+ ✓ src/lib/hooks.test.jsx > useFetch > refaz a busca quando as dependências mudam
+ ✓ src/lib/hooks.test.jsx > useInterval > chama a função no intervalo e para ao desmontar
+ ✓ src/lib/hooks.test.jsx > useInterval > não dispara quando inativo
+ ✓ src/components/Toast.test.jsx > Toast > mostra a mensagem numa região acessível e some depois de 4,2 s 514ms
+ ✓ src/components/Toast.test.jsx > Toast > empilha várias mensagens, inclusive de erro
+ ✓ src/components/Toast.test.jsx > Toast > useToast fora do provider não quebra
+ ✓ src/lib/format.test.js > datas civis (sem fuso) > formata dd/mm e dd/mm/aaaa
+ ✓ src/lib/format.test.js > datas civis (sem fuso) > soma dias atravessando mês e ano
+ ✓ src/lib/format.test.js > datas civis (sem fuso) > semana começa na segunda
+ ✓ src/lib/format.test.js > fuso America/Sao_Paulo > converte horário digitado em Brasília para UTC (UTC-3) 521ms
+ ✓ src/lib/format.test.js > helpers > iniciais e números pt-BR
+
+ Test Files  8 passed (8)
+      Tests  64 passed (64)
+   Start at  00:37:53
+   Duration  56.61s (transform 1.95s, setup 19.09s, collect 12.46s, tests 8.56s, environment 85.61s, prepare 37.20s)
+
+
+
