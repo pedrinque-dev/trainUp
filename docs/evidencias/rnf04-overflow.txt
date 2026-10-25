@@ -1,0 +1,30 @@
+Verificação de rolagem horizontal (scrollWidth - clientWidth; 0 = sem rolagem horizontal)
+
+01-login               desktop-1440   excesso =   0 px  OK
+02-visao-geral         desktop-1440   excesso =   0 px  OK
+03-alunos              desktop-1440   excesso =   0 px  OK
+04-perfil-aluno        desktop-1440   excesso =   0 px  OK
+05-treinos             desktop-1440   excesso =   0 px  OK
+06-agenda-personal     desktop-1440   excesso =   0 px  OK
+07-exercicios          desktop-1440   excesso =   0 px  OK
+08-relatorios          desktop-1440   excesso =   0 px  OK
+09-catraca             desktop-1440   excesso =   0 px  OK
+10-inicio-aluno        desktop-1440   excesso =   0 px  OK
+11-treinar             desktop-1440   excesso =   0 px  OK
+12-evolucao            desktop-1440   excesso =   0 px  OK
+13-agenda-aluno        desktop-1440   excesso =   0 px  OK
+01-login               celular-375    excesso =   0 px  OK
+02-visao-geral         celular-375    excesso =   0 px  OK
+03-alunos              celular-375    excesso =   0 px  OK
+04-perfil-aluno        celular-375    excesso =   0 px  OK
+05-treinos             celular-375    excesso =   0 px  OK
+06-agenda-personal     celular-375    excesso =   0 px  OK
+07-exercicios          celular-375    excesso =   0 px  OK
+08-relatorios          celular-375    excesso =   0 px  OK
+09-catraca             celular-375    excesso =   0 px  OK
+10-inicio-aluno        celular-375    excesso =   0 px  OK
+11-treinar             celular-375    excesso =   0 px  OK
+12-evolucao            celular-375    excesso =   0 px  OK
+13-agenda-aluno        celular-375    excesso =   0 px  OK
+
+26 capturas; telas com rolagem horizontal: 0

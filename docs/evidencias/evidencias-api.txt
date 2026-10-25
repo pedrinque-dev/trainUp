@@ -1,0 +1,20 @@
+Coleta em 24/10/2026 21:43 contra http://localhost:8000/api/v1
+
+== RNF03 — tempo de resposta de GET /analytics/evolution (limite: 3 s) ==
+  chamada 1: HTTP 200, 8 exercícios, 128 pontos, 51.5 ms
+  chamada 2: HTTP 200, 8 exercícios, 128 pontos, 13.1 ms
+  chamada 3: HTTP 200, 8 exercícios, 128 pontos, 9.1 ms
+  chamada 4: HTTP 200, 8 exercícios, 128 pontos, 9.1 ms
+  chamada 5: HTTP 200, 8 exercícios, 128 pontos, 9.6 ms
+  média 18.5 ms | máximo 51.5 ms | resultado: APROVADO
+
+== RNF08 — ciclo da catraca (limite: 1 s por ciclo) ==
+  cenário valida       granted=True  motivo=None                             cycle_ms=0
+  cenário invalida     granted=False motivo=credencial não reconhecida       cycle_ms=0
+  cenário sem_aula     granted=False motivo=sem agendamento para este aluno  cycle_ms=0
+  cenário fora_janela  granted=False motivo=fora da janela: cedo demais (libera às 21:28) cycle_ms=0
+  cenário dupla        granted=True  motivo=None                             cycle_ms=0
+  cenário dupla        granted=False motivo=check-in já realizado para esta aula (anti-fraude) cycle_ms=1
+  check-in real      granted=True transições=['VALIDANDO', 'LIBERADA', 'AGUARDANDO_PASSAGEM']
+                     cycle_ms=0 | tempo total da requisição 12.1 ms
+  ciclos medidos: 7 | máximo 1 ms | resultado: APROVADO
