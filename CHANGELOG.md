@@ -2,7 +2,7 @@
 
 Registro das mudanças de escopo, decisões e correções do projeto, por Sprint.
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
-Detalhamento e justificativas: ERS v2.1, seção 6.
+Detalhamento e justificativas: ERS v2.2, seção 6.
 
 ---
 
