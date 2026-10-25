@@ -136,7 +136,7 @@ API em http://127.0.0.1:8000 · documentação em http://127.0.0.1:8000/api/docs
 
 ### Frontend
 
-Pré-requisito: Node.js 20.
+Pré-requisito: Node.js 22.
 
 ```bash
 cd frontend
