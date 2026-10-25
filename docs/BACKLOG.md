@@ -1,6 +1,6 @@
 # Backlog do produto — TrainUp
 
-Backlog derivado da ERS v2.1. Situação em 25/10/2026 (fim da Sprint 2).
+Backlog derivado da ERS v2.2. Situação em 25/10/2026 (fim da Sprint 2).
 
 **Legenda de status:** ✅ Concluído · 🔄 Em andamento · 📋 Planejado (Sprint 3) · 💡 Evolução futura
 
