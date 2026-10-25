@@ -24,6 +24,7 @@ Plataforma web para gestão de treinos entre **Personal Trainers** e **alunos**:
 - [API](#api)
 - [Testes e CI](#testes-e-ci)
 - [Segurança](#segurança)
+- [Documentação](#documentação)
 - [Estrutura do projeto](#estrutura-do-projeto)
 
 ---
@@ -246,6 +247,8 @@ pytest -q --cov=app --cov-report=term-missing
 ruff check app tests --select E9,F63,F7,F82,F401
 ```
 
+> O Ruff roda com um subconjunto de regras (erros de sintaxe, nomes indefinidos e imports não usados), não com o conjunto completo.
+
 ### Frontend
 
 ```bash
@@ -276,6 +279,20 @@ O workflow `.github/workflows/ci.yml` roda a cada push na `main`/`master` e em p
 
 ---
 
+## Documentação
+
+| Documento | Local |
+|---|---|
+| Especificação de Requisitos de Software (ERS v2.2) | [`docs/TrainUp_ERS_v2_2.pdf`](./docs/TrainUp_ERS_v2_2.pdf) |
+| Backlog do produto | [`docs/BACKLOG.md`](./docs/BACKLOG.md) |
+| Registro de mudanças e decisões | [`CHANGELOG.md`](./CHANGELOG.md) |
+| Documentação da API (Swagger/OpenAPI exportado e prints) | [`docs/api/`](./docs/api) |
+| Diagramas UML e DER | [`docs/diagramas/`](./docs/diagramas) |
+| Protótipos das telas | [`docs/prototipos/`](./docs/prototipos) |
+| Evidências de testes (saídas, cobertura, capturas de tela) | [`docs/evidencias/`](./docs/evidencias) |
+
+---
+
 ## Estrutura do projeto
 
 ```
@@ -300,10 +317,18 @@ trainup/
 │   │   └── lib/              # utilitários e hooks
 │   ├── nginx.conf
 │   └── Dockerfile
+├── docs/
+│   ├── TrainUp_ERS_v2_2.pdf  # especificação de requisitos
+│   ├── BACKLOG.md
+│   ├── api/                  # Swagger: prints e openapi.json
+│   ├── diagramas/            # casos de uso, classes, DER, sequência
+│   ├── evidencias/           # testes, cobertura e capturas de tela
+│   └── prototipos/
 ├── .github/workflows/ci.yml
 ├── docker-compose.yml
 ├── docker-compose.dev.yml
 ├── .env.example
+├── CHANGELOG.md
 ├── run_backend.bat
 └── run_frontend.bat
 ```
