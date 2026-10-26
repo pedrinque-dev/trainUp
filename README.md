@@ -284,6 +284,7 @@ O workflow `.github/workflows/ci.yml` roda a cada push na `main`/`master` e em p
 | Documento | Local |
 |---|---|
 | Especificação de Requisitos de Software (ERS v2.2) | [`docs/TrainUp_ERS_v2_2.pdf`](./docs/TrainUp_ERS_v2_2.pdf) |
+| ERS v1.0 (Sprint 1, histórico; substituída pela v2.2) | [`docs/historico/TrainUp_ERS_v1_0.pdf`](./docs/historico/TrainUp_ERS_v1_0.pdf) |
 | Backlog do produto | [`docs/BACKLOG.md`](./docs/BACKLOG.md) |
 | Registro de mudanças e decisões | [`CHANGELOG.md`](./CHANGELOG.md) |
 | Documentação da API (Swagger/OpenAPI exportado e prints) | [`docs/api/`](./docs/api) |
@@ -320,6 +321,7 @@ trainup/
 ├── docs/
 │   ├── TrainUp_ERS_v2_2.pdf  # especificação de requisitos
 │   ├── BACKLOG.md
+│   ├── historico/            # versões anteriores da ERS (Sprint 1)
 │   ├── api/                  # Swagger: prints e openapi.json
 │   ├── diagramas/            # casos de uso, classes, DER, sequência
 │   ├── evidencias/           # testes, cobertura e capturas de tela
