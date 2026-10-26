@@ -1,6 +1,7 @@
-============================= test session starts ==============================
-platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.7.0 -- /home/claude/venv/bin/python
-rootdir: /home/claude/w/trainUp-main/backend
+============================= test session starts =============================
+platform win32 -- Python 3.14.4, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\Pedro\AppData\Local\Programs\Python\Python314\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Pedro\projeto_integrador\trainUp\backend
 configfile: pytest.ini
 testpaths: tests
 plugins: anyio-4.15.1, cov-7.1.0
@@ -68,59 +69,60 @@ tests/test_users_automacao.py::test_reset_fora_de_bloqueio_e_aluno_sem_permissao
 tests/test_users_automacao.py::test_simulador_sem_aluno_e_cenario_invalido PASSED [ 98%]
 tests/test_users_automacao.py::test_checkin_de_aula_de_outro_aluno_e_negado PASSED [100%]
 
-=============================== warnings summary ===============================
-../../../venv/lib/python3.12/site-packages/fastapi/testclient.py:1
-  /home/claude/venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+============================== warnings summary ===============================
+..\..\..\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\Pedro\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-================================ tests coverage ================================
-_______________ coverage: platform linux, python 3.12.3-final-0 ________________
+- generated xml file: C:\Users\Pedro\projeto_integrador\trainUp\docs\evidencias\pytest_junit.xml -
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.4-final-0 _______________
 
 Name                         Stmts   Miss  Cover
 ------------------------------------------------
-app/__init__.py                  0      0   100%
-app/core/__init__.py             0      0   100%
-app/core/config.py              34      5    85%
-app/core/ratelimit.py           27      1    96%
-app/core/security.py            50      2    96%
-app/core/types.py               16      1    94%
-app/core/tz.py                  17      0   100%
-app/database.py                 16      0   100%
-app/main.py                     33     10    70%
-app/models/__init__.py           9      0   100%
-app/models/access.py            37      0   100%
-app/models/link.py              27      0   100%
-app/models/progress.py          17      0   100%
-app/models/report.py            13      0   100%
-app/models/schedule.py          24      0   100%
-app/models/session.py           13      0   100%
-app/models/user.py              22      0   100%
-app/models/workout.py           32      0   100%
-app/routers/__init__.py          0      0   100%
-app/routers/analytics.py        23      1    96%
-app/routers/auth.py            103      2    98%
-app/routers/automation.py       84      2    98%
-app/routers/dashboard.py        23      0   100%
-app/routers/links.py            49      6    88%
-app/routers/progress.py         22      0   100%
-app/routers/reports.py          41      3    93%
-app/routers/schedules.py        51      2    96%
-app/routers/sessions.py         54      0   100%
-app/routers/users.py            54      1    98%
-app/routers/workouts.py        109     17    84%
-app/schemas/__init__.py          0      0   100%
-app/schemas/progress.py         40      0   100%
-app/schemas/schedule.py         20      0   100%
-app/schemas/user.py             72      1    99%
-app/schemas/workout.py          36      0   100%
-app/seed.py                     93      0   100%
-app/services/__init__.py         0      0   100%
-app/services/analytics.py       49      1    98%
-app/services/report_pdf.py     130      3    98%
-app/services/reports.py         72      7    90%
-app/services/sessions.py        35      1    97%
-app/services/turnstile.py      176     12    93%
+app\__init__.py                  0      0   100%
+app\core\__init__.py             0      0   100%
+app\core\config.py              34      5    85%
+app\core\ratelimit.py           27      1    96%
+app\core\security.py            50      2    96%
+app\core\types.py               16      1    94%
+app\core\tz.py                  17      0   100%
+app\database.py                 16      0   100%
+app\main.py                     33     10    70%
+app\models\__init__.py           9      0   100%
+app\models\access.py            37      0   100%
+app\models\link.py              27      0   100%
+app\models\progress.py          17      0   100%
+app\models\report.py            13      0   100%
+app\models\schedule.py          24      0   100%
+app\models\session.py           13      0   100%
+app\models\user.py              22      0   100%
+app\models\workout.py           32      0   100%
+app\routers\__init__.py          0      0   100%
+app\routers\analytics.py        23      1    96%
+app\routers\auth.py            103      2    98%
+app\routers\automation.py       84      2    98%
+app\routers\dashboard.py        23      0   100%
+app\routers\links.py            49      6    88%
+app\routers\progress.py         22      0   100%
+app\routers\reports.py          41      3    93%
+app\routers\schedules.py        51      2    96%
+app\routers\sessions.py         54      0   100%
+app\routers\users.py            54      1    98%
+app\routers\workouts.py        109     17    84%
+app\schemas\__init__.py          0      0   100%
+app\schemas\progress.py         27      0   100%
+app\schemas\schedule.py         10      0   100%
+app\schemas\user.py             50      1    98%
+app\schemas\workout.py          22      0   100%
+app\seed.py                     93      0   100%
+app\services\__init__.py         0      0   100%
+app\services\analytics.py       49      1    98%
+app\services\report_pdf.py     130      3    98%
+app\services\reports.py         72      7    90%
+app\services\sessions.py        35      1    97%
+app\services\turnstile.py      173     12    93%
 ------------------------------------------------
-TOTAL                         1723     78    95%
-=================== 61 passed, 1 warning in 84.67s (0:01:24) ===================
+TOTAL                         1661     78    95%
+================== 61 passed, 1 warning in 382.01s (0:06:22) ==================
