@@ -34,6 +34,7 @@ Converte a especificação da Sprint 1 no que foi efetivamente construído.
 - Integração contínua (GitHub Actions): ruff, pytest, vitest, build e `docker compose`.
 - 61 testes de backend (cobertura 95,47%) e 64 de frontend (cobertura 97,73%), com saídas em `docs/evidencias/`.
 - Ambiente de desenvolvimento em AWS EC2 com code-server (RNF05).
+- Atas de reunião da Sprint 2 em `docs/ATAS.md`.
 
 ### Alterado
 - **Núcleo do MVP:** a evolução deixou de ser registrada manualmente pelo Personal (peso, medidas) e passou a ser calculada das séries executadas pelo Aluno (carga, repetições, volume, recordes, estagnação).
